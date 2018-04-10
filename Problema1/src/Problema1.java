@@ -5,7 +5,7 @@ public class Problema1 {
 		// TODO Auto-generated method stub
 
 		WAVPlayer teste;
-		String testeString = "Gustavo";
+		String testeString = "Gustavo Westarb.";
 	}
 
 }
