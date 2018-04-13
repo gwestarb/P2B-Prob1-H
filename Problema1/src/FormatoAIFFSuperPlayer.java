@@ -5,6 +5,8 @@ public class FormatoAIFFSuperPlayer implements FormatoAudio{
 	public void abrir(String arquivo) {
 		// TODO Auto-generated method stub
 		
+		
+		
 	}
 
 	@Override
