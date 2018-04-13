@@ -1,45 +1,49 @@
 
 public class FormatoWmaPlay implements FormatoAudio{
 
+	public wmaPlay arquivoWmaPlay = new wmaPlay();
 	@Override
 	public void abrir(String arquivo) {
-		// TODO Auto-generated method stub
+		arquivoWmaPlay.setFile(arquivo);
+		arquivoWmaPlay.open();
+		arquivoWmaPlay.setLocation(0);
 		
 	}
 
 	@Override
 	public void reproduzir() {
-		// TODO Auto-generated method stub
+		arquivoWmaPlay.play();
 		
 	}
 
 	@Override
 	public void pausar() {
-		// TODO Auto-generated method stub
+		arquivoWmaPlay.stop();
 		
 	}
 
 	@Override
 	public void parar() {
-		// TODO Auto-generated method stub
+		arquivoWmaPlay.stop();
+		arquivoWmaPlay.stop();
 		
 	}
 
 	@Override
 	public void avancar(int qtdSegundos) {
-		// TODO Auto-generated method stub
+		arquivoWmaPlay.setLocation(arquivoWmaPlay.getLocation() + qtdSegundos);
 		
 	}
 
 	@Override
 	public void retornar(int qtdSegundos) {
-		// TODO Auto-generated method stub
+		arquivoWmaPlay.setLocation(arquivoWmaPlay.getLocation() - qtdSegundos);
 		
 	}
 
 	@Override
 	public void liberar() {
-		// TODO Auto-generated method stub
+		arquivoWmaPlay = null;
 		
 	}
 
