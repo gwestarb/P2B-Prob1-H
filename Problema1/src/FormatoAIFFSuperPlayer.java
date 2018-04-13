@@ -34,7 +34,7 @@ public class FormatoAIFFSuperPlayer implements FormatoAudio{
 	}
 
 	@Override
-	public void retomar(int qtdSegundos) {
+	public void retornar(int qtdSegundos) {
 		// TODO Auto-generated method stub
 		
 	}

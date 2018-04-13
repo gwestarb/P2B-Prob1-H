@@ -11,7 +11,7 @@ public interface FormatoAudio {
 	
 	void avancar(int qtdSegundos);
 	
-	void retomar(int qtdSegundos);
+	void retornar(int qtdSegundos);
 	
 	void liberar();
 	

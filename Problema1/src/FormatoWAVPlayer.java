@@ -11,38 +11,49 @@ public class FormatoWAVPlayer implements FormatoAudio {
 
 	@Override
 	public void reproduzir() {
-		// TODO Auto-generated method stub
+		
+		if(arquivoWAVPlayer != null) {
+			arquivoWAVPlayer.play();
+		}
 		
 	}
 
 	@Override
 	public void pausar() {
-		// TODO Auto-generated method stub
+		
+		if(arquivoWAVPlayer != null){
+			arquivoWAVPlayer.stop();
+		}
 		
 	}
 
 	@Override
 	public void parar() {
-		// TODO Auto-generated method stub
 		
+		if(arquivoWAVPlayer != null){
+			arquivoWAVPlayer.stop();
+		}
 	}
 
 	@Override
 	public void avancar(int qtdSegundos) {
-		// TODO Auto-generated method stub
-		
+				
+		if(arquivoWAVPlayer != null) {
+			arquivoWAVPlayer.forward((qtdSegundos / 1000));
+		}
 	}
 
 	@Override
-	public void retomar(int qtdSegundos) {
-		// TODO Auto-generated method stub
+	public void retornar(int qtdSegundos) {
 		
+		if(arquivoWAVPlayer != null) {
+			arquivoWAVPlayer.reward((qtdSegundos / 1000));
+		}
 	}
 
 	@Override
 	public void liberar() {
-		// TODO Auto-generated method stub
-		
+		arquivoWAVPlayer = null;
 	}
 
 }
