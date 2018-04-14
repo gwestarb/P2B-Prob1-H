@@ -1,3 +1,4 @@
+import problema1.WAVPlayer;
 
 public class FormatoWAVPlayer implements FormatoAudio {
 
@@ -53,6 +54,21 @@ public class FormatoWAVPlayer implements FormatoAudio {
 
 	@Override
 	public void liberar() {
+		arquivoWAVPlayer = null;
+	}
+
+	@Override
+	public void reproduzirSimples(String arquivo) {
+		arquivoWAVPlayer = new WAVPlayer(arquivo);
+		
+		if (arquivoWAVPlayer != null) {
+			arquivoWAVPlayer.play();
+		}
+	}
+
+	@Override
+	public void paraSimples() {
+		arquivoWAVPlayer.stop();
 		arquivoWAVPlayer = null;
 	}
 

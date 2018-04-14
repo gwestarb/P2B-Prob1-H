@@ -15,7 +15,7 @@ public interface FormatoAudio {
 	
 	void liberar();
 	
-	//void reproduzirSimples(String):
+	void reproduzirSimples(String arquivo);
 	
-	
+	void paraSimples();
 }

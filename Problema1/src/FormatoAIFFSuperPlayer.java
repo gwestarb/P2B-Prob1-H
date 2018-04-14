@@ -1,47 +1,78 @@
+import problema1.AIFFSuperPlayer;
 
 public class FormatoAIFFSuperPlayer implements FormatoAudio{
 
+	
+	public AIFFSuperPlayer arquivoAIFFSuperPlayer;
+	public int pontoExecucao;
+	
 	@Override
 	public void abrir(String arquivo) {
-		// TODO Auto-generated method stub
 		
-		
-		
+		arquivoAIFFSuperPlayer = new AIFFSuperPlayer(arquivo);
+		pontoExecucao = 0;
 	}
 
 	@Override
 	public void reproduzir() {
-		// TODO Auto-generated method stub
-		
+		if (arquivoAIFFSuperPlayer != null) {
+			arquivoAIFFSuperPlayer.setCursor(pontoExecucao);
+			arquivoAIFFSuperPlayer.play();
+		}
 	}
 
 	@Override
 	public void pausar() {
-		// TODO Auto-generated method stub
-		
+		if (arquivoAIFFSuperPlayer != null) {
+			pontoExecucao = arquivoAIFFSuperPlayer.pause();
+		}
 	}
 
 	@Override
 	public void parar() {
-		// TODO Auto-generated method stub
-		
+		if (arquivoAIFFSuperPlayer != null) {
+			arquivoAIFFSuperPlayer.stop();
+			pontoExecucao = 0;
+		}
 	}
 
 	@Override
 	public void avancar(int qtdSegundos) {
-		// TODO Auto-generated method stub
-		
+		if (arquivoAIFFSuperPlayer != null) {
+			arquivoAIFFSuperPlayer.setCursor(qtdSegundos);
+			arquivoAIFFSuperPlayer.play();
+		}
 	}
 
 	@Override
 	public void retornar(int qtdSegundos) {
-		// TODO Auto-generated method stub
-		
+		if (arquivoAIFFSuperPlayer != null) {
+			arquivoAIFFSuperPlayer.setCursor(qtdSegundos);
+			arquivoAIFFSuperPlayer.play();
+		}
 	}
 
 	@Override
 	public void liberar() {
-		// TODO Auto-generated method stub
+		if (arquivoAIFFSuperPlayer != null) {
+			arquivoAIFFSuperPlayer.release();
+		}
+	}
+
+	@Override
+	public void reproduzirSimples(String arquivo) {
+		arquivoAIFFSuperPlayer = new AIFFSuperPlayer(arquivo);
+		arquivoAIFFSuperPlayer.setCursor(0);
+		arquivoAIFFSuperPlayer.play();
+	}
+
+	@Override
+	public void paraSimples() {
+		if (arquivoAIFFSuperPlayer != null) {
+			arquivoAIFFSuperPlayer.stop();
+			arquivoAIFFSuperPlayer.release();
+		}
+		
 		
 	}
 
