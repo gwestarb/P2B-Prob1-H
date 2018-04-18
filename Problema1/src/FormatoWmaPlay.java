@@ -13,33 +13,41 @@ public class FormatoWmaPlay implements FormatoAudio{
 
 	@Override
 	public void reproduzir() {
-		arquivoWmaPlay.play();
+		if (arquivoWmaPlay != null) {
+			arquivoWmaPlay.play();
+		}
 		
 	}
 
 	@Override
 	public void pausar() {
-		arquivoWmaPlay.stop();
-		
+		if (arquivoWmaPlay != null) {
+			arquivoWmaPlay.stop();
+		}
 	}
 
 	@Override
 	public void parar() {
-		arquivoWmaPlay.stop();
-		arquivoWmaPlay.stop();
-		
+		if (arquivoWmaPlay != null) {
+			arquivoWmaPlay.stop();
+			arquivoWmaPlay.stop();
+		}
 	}
 
 	@Override
 	public void avancar(int qtdSegundos) {
-		arquivoWmaPlay.setLocation(arquivoWmaPlay.getLocation() + qtdSegundos);
-		
+		if (arquivoWmaPlay != null) {
+			arquivoWmaPlay.setLocation(arquivoWmaPlay.getLocation() + qtdSegundos);
+			arquivoWmaPlay.play();
+		}
 	}
 
 	@Override
 	public void retornar(int qtdSegundos) {
-		arquivoWmaPlay.setLocation(arquivoWmaPlay.getLocation() - qtdSegundos);
-		
+		if (arquivoWmaPlay != null) {
+			arquivoWmaPlay.setLocation(arquivoWmaPlay.getLocation() - qtdSegundos);
+			arquivoWmaPlay.play();
+		}
 	}
 
 	@Override
@@ -58,9 +66,11 @@ public class FormatoWmaPlay implements FormatoAudio{
 
 	@Override
 	public void paraSimples() {
-		arquivoWmaPlay.stop();
-		arquivoWmaPlay.stop();
-		arquivoWmaPlay = null;
+		if (arquivoWmaPlay != null) {
+			arquivoWmaPlay.stop();
+			arquivoWmaPlay.stop();
+			arquivoWmaPlay = null;
+		}	
 	}
 
 }
