@@ -4,10 +4,9 @@ public class Problema1 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		FormatoWAVPlayer formatoAudioWAVPlayer = new FormatoWAVPlayer();
+		FormatoAdapter audioQualquerFormato = new FormatoAdapter();
 		
-		
-		formatoAudioWAVPlayer.abrir("teste");
+		audioQualquerFormato.abrir("teste/teste/teste.wavplayer");
 		
 	}
 
