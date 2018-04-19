@@ -6,7 +6,7 @@ public class Problema1 {
 		
 		FormatoAdapter audioQualquerFormato = new FormatoAdapter();
 		
-		audioQualquerFormato.abrir("teste/teste/teste.wavplayer");
+		audioQualquerFormato.abrir("teste/teste/teste.aiff");
 		
 	}
 
