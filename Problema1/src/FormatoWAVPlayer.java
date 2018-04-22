@@ -33,6 +33,7 @@ public class FormatoWAVPlayer implements FormatoAudio {
 		
 		if(arquivoWAVPlayer != null){
 			arquivoWAVPlayer.stop();
+			arquivoWAVPlayer.reward(arquivoWAVPlayer.reward(0));
 		}
 	}
 
@@ -69,6 +70,7 @@ public class FormatoWAVPlayer implements FormatoAudio {
 	@Override
 	public void paraSimples() {
 		arquivoWAVPlayer.stop();
+		arquivoWAVPlayer.reward(arquivoWAVPlayer.reward(0));
 		arquivoWAVPlayer = null;
 	}
 

@@ -1,4 +1,3 @@
-
 public class FormatoFactory {
 	
 	public String extension = "";
@@ -18,6 +17,10 @@ public class FormatoFactory {
 			return new FormatoWmaPlay();
 		} else if (extension.equalsIgnoreCase("aiff")) {
 			return new FormatoAIFFSuperPlayer();
+		} else if (extension.equalsIgnoreCase("aac")) {
+			return new FormatoAACPlayer();
+		} else if (extension.equalsIgnoreCase("mp3dj")) {
+			return new FormatoMP3DJPlayer();
 		}
 		throw new IllegalArgumentException("Tipo de audio não suportado");
 	}
