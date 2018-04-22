@@ -1,10 +1,10 @@
 
-public class FormatoAdapter {
+public class FormatoFacade {
 
 	FormatoAudio formato;
 	String arquivo = "";
 	
-	public FormatoAdapter(String arquivo) {
+	public FormatoFacade (String arquivo) {
 		
 		this.arquivo = arquivo;
 		FormatoFactory formatoFactory = new FormatoFactory();
