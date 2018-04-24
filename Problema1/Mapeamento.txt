@@ -1,5 +1,14 @@
-* - Façade: A nossa interface FormatoAudio atual como nossa façade sendo assim o subsistema é composto pelas classes adapter;
+* - Façade: 
 
-* - Adapter: A nossa interface FormatoAudio seria nossa Target, as classes FormatoWmaPlayer, FormatoWAVPlayer, FormatoMP3DJPlayer, FormatoAIFFSuperPlayer e FormatoAACPlayer, são as Adapters e as classes fornecidas pelo cliente(empresa que nos contratou) são as Adaptee.
+A nossa classe Facade atua como nossa façade, sendo assim o subsistema é composto pelas classes adapter;
 
-* - Factory: Em nosso projeto a classe FormatoFactory é o nosso Factory Method, e a classe Facade é a participante deste padrão.
+
+* - Adapter: 
+
+A nossa interface FormatoAudio seria a Target, as classes FormatoWmaPlayer, FormatoWAVPlayer, FormatoMP3DJPlayer, FormatoAIFFSuperPlayer e FormatoAACPlayer, são as Adapters e as classes fornecidas pelo cliente(empresa que nos contratou) são as Adaptee.
+
+
+
+* - Factory: 
+
+Em nosso projeto a classe FormatoFactory é o nosso Factory Method, e a classe Facade é a participante deste padrão.
