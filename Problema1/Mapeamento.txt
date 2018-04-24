@@ -1,6 +1,6 @@
 * - Façade: 
 
-A nossa interface FormatoAudio atua como nossa façade, sendo assim o subsistema é composto pelas classes adapter;
+A nossa classe Facade atua como nossa façade, sendo assim o subsistema é composto pelas classes adapter;
 
 
 * - Adapter: 
