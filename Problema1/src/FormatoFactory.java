@@ -1,25 +1,15 @@
 public class FormatoFactory {
 	
-	public String extension = "";
-	
-	public FormatoAudio getFormatoAudio(String arquivo) {		
-		int i = arquivo.lastIndexOf('.');
-		if (i > 0) {
-			extension = arquivo.substring(i + 1);
-		}	
-		return verificaExtensao();
-	}
-	
-	public FormatoAudio verificaExtensao() {
-		if (extension.equalsIgnoreCase("wav")) {
+	public static FormatoAudio getFormatoAudio(String arquivo) throws IllegalArgumentException{		
+		if (arquivo.endsWith(".wav")) {
 			return new FormatoWAVPlayer();
-		} else if (extension.equalsIgnoreCase("wmp")) {
+		} else if (arquivo.endsWith(".wmp")) {
 			return new FormatoWmaPlay();
-		} else if (extension.equalsIgnoreCase("aiff")) {
+		} else if (arquivo.endsWith(".aiff")) {
 			return new FormatoAIFFSuperPlayer();
-		} else if (extension.equalsIgnoreCase("aac")) {
+		} else if (arquivo.endsWith(".aac")) {
 			return new FormatoAACPlayer();
-		} else if (extension.equalsIgnoreCase("mp3dj")) {
+		} else if (arquivo.endsWith(".mp3dj")) {
 			return new FormatoMP3DJPlayer();
 		}
 		throw new IllegalArgumentException("Tipo de audio não suportado");
