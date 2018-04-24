@@ -55,22 +55,4 @@ public class FormatoWmaPlay implements FormatoAudio{
 		arquivoWmaPlay = null;
 		
 	}
-
-	@Override
-	public void reproduzirSimples(String arquivo) {
-		arquivoWmaPlay.setFile(arquivo);
-		arquivoWmaPlay.open();
-		arquivoWmaPlay.setLocation(0);
-		arquivoWmaPlay.play();
-	}
-
-	@Override
-	public void paraSimples() {
-		if (arquivoWmaPlay != null) {
-			arquivoWmaPlay.stop();
-			arquivoWmaPlay.stop();
-			arquivoWmaPlay = null;
-		}	
-	}
-
 }

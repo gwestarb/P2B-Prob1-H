@@ -57,21 +57,4 @@ public class FormatoMP3DJPlayer implements FormatoAudio {
 		arquivoMP3DJ = null;
 	}
 
-	@Override
-	public void reproduzirSimples(String arquivo) {
-		// TODO Auto-generated method stub
-		arquivoMP3DJ.setFile(arquivo);
-		arquivoMP3DJ.play();
-	}
-
-	@Override
-	public void paraSimples() {
-		// TODO Auto-generated method stub
-		if (arquivoMP3DJ != null) {
-			arquivoMP3DJ.stop();
-			arquivoMP3DJ.reward(arquivoMP3DJ.reward(0));
-			arquivoMP3DJ = null;
-		}
-	}
-
 }

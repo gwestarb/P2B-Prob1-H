@@ -58,22 +58,4 @@ public class FormatoAIFFSuperPlayer implements FormatoAudio{
 			arquivoAIFFSuperPlayer.release();
 		}
 	}
-
-	@Override
-	public void reproduzirSimples(String arquivo) {
-		arquivoAIFFSuperPlayer = new AIFFSuperPlayer(arquivo);
-		arquivoAIFFSuperPlayer.setCursor(0);
-		arquivoAIFFSuperPlayer.play();
-	}
-
-	@Override
-	public void paraSimples() {
-		if (arquivoAIFFSuperPlayer != null) {
-			arquivoAIFFSuperPlayer.stop();
-			arquivoAIFFSuperPlayer.release();
-		}
-		
-		
-	}
-
 }

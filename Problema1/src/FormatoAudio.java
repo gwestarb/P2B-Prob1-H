@@ -14,8 +14,4 @@ public interface FormatoAudio {
 	void retornar(int qtdSegundos);
 	
 	void liberar();
-	
-	void reproduzirSimples(String arquivo);
-	
-	void paraSimples();
 }

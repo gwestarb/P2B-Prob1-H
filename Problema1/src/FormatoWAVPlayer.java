@@ -57,21 +57,4 @@ public class FormatoWAVPlayer implements FormatoAudio {
 	public void liberar() {
 		arquivoWAVPlayer = null;
 	}
-
-	@Override
-	public void reproduzirSimples(String arquivo) {
-		arquivoWAVPlayer = new WAVPlayer(arquivo);
-		
-		if (arquivoWAVPlayer != null) {
-			arquivoWAVPlayer.play();
-		}
-	}
-
-	@Override
-	public void paraSimples() {
-		arquivoWAVPlayer.stop();
-		arquivoWAVPlayer.reward(arquivoWAVPlayer.reward(0));
-		arquivoWAVPlayer = null;
-	}
-
 }
