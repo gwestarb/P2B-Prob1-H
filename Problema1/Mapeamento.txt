@@ -12,3 +12,5 @@ A nossa interface FormatoAudio seria a Target, as classes FormatoWmaPlayer, Form
 * - Factory: 
 
 Em nosso projeto a classe FormatoFactory é o nosso Factory Method, e a classe Facade é a participante deste padrão.
+--> Prof. Marcel: quem é Product? Quem é ConcreteProduct?
+--> Prof. Marcel: a classe Façade não participa diretamente da implementação do padrão FactoryMethod.
